@@ -1,0 +1,35 @@
+{
+  "name": "hooks",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "animate.css": "^4.1.1",
+    "axios": "^0.25.0",
+    "bootstrap": "^5.1.3",
+    "jquery": "^3.6.0",
+    "owl.carousel": "^2.3.4",
+    "owljs": "^0.9.1",
+    "react": "^17.0.2",
+    "react-awesome-reveal": "^3.8.1",
+    "react-countup": "^6.2.0",
+    "react-dom": "^17.0.2",
+    "react-helmet": "^6.1.0",
+    "react-icons": "^4.3.1",
+    "react-parallax-tilt": "^1.7.32",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "0.9.5",
+    "react-slick": "^0.29.0",
+    "slick-carousel": "^1.8.1",
+    "webpack": "^5.72.0",
+    "wowjs": "^1.1.3"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "web-vitals": "^2.1.4"
+  }
+}
