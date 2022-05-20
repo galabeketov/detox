@@ -1,6 +1,50 @@
-import React from 'react';
-
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import $ from 'jquery';
 export default function MobileMenu() {
+  // //Mobile Nav Hide Show
+  // if ($('.mobile-menu').length) {
+  //   $('.mobile-menu .menu-box').mCustomScrollbar();
+
+  //   var mobileMenuContent = $('.main-header .menu-area .main-menu').html();
+  //   $('.mobile-menu .menu-box .menu-outer').append(mobileMenuContent);
+  //   $('.sticky-header .main-menu').append(mobileMenuContent);
+
+  //   //Dropdown Button
+  //   $('.mobile-menu li.dropdown .dropdown-btn').on('click', function () {
+  //     $(this).toggleClass('open');
+  //     $(this).prev('ul').slideToggle(500);
+  //   });
+  //   //Menu Toggle Btn
+  //   $('.mobile-nav-toggler').on('click', function () {
+  //     $('body').addClass('mobile-menu-visible');
+  //   });
+
+  //   //Menu Toggle Btn
+  //   $('.mobile-menu .menu-backdrop,.mobile-menu .close-btn').on(
+  //     'click',
+  //     function () {
+  //       $('body').removeClass('mobile-menu-visible');
+  //     },
+  //   );
+  // }
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 1200);
+
+  {
+    /* Performs similarly to componentDidMount in classes */
+  }
+  useEffect(() => {
+    window.addEventListener(
+      'resize',
+      () => {
+        const ismobile = window.innerWidth < 1200;
+        if (ismobile !== isMobile) setIsMobile(ismobile);
+      },
+      false,
+    );
+  }, [isMobile]);
+
   return (
     <div>
       <div className="mobile-menu">
@@ -11,9 +55,9 @@ export default function MobileMenu() {
 
         <nav className="menu-box">
           <div className="nav-logo">
-            <a href="index.html">
+            <Link to="/">
               <img src="images/logo-2.png" alt="" title="" />
-            </a>
+            </Link>
           </div>
           <div className="menu-outer"></div>
           <div className="contact-info">
@@ -21,39 +65,39 @@ export default function MobileMenu() {
             <ul>
               <li>Chicago 12, Melborne City, USA</li>
               <li>
-                <a href="tel:+8801682648101">+88 01682648101</a>
+                <Link to="tel:+8801682648101">+88 01682648101</Link>
               </li>
               <li>
-                <a href="mailto:info@example.com">info@example.com</a>
+                <Link to="mailto:info@example.com">info@example.com</Link>
               </li>
             </ul>
           </div>
           <div className="social-links">
             <ul className="clearfix">
               <li>
-                <a href="index.html">
+                <Link to="/">
                   <span className="fab fa-twitter"></span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="index.html">
+                <Link to="/">
                   <span className="fab fa-facebook-square"></span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="index.html">
+                <Link to="/">
                   <span className="fab fa-pinterest-p"></span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="index.html">
+                <Link to="/">
                   <span className="fab fa-instagram"></span>
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="index.html">
+                <Link to="/">
                   <span className="fab fa-youtube"></span>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

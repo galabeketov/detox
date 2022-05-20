@@ -4,6 +4,7 @@ import Tilt from 'react-parallax-tilt';
 export default function FeatureSection() {
   return (
     <section className="feature-section">
+      <h1 className="my-5 text-center">Title</h1>
       <div className="auto-container">
         <div className="row">
           <div className="col-lg-4 col-md-6 col-sm-12 feature-block">

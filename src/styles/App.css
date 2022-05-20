@@ -44,3 +44,14 @@
 a {
   cursor: pointer;
 }
+.floating {
+  background-color: transparent !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.menu-right-content {
+  margin-top: 55px !important;
+}
+.ui.button {
+  background-color: transparent !important;
+}

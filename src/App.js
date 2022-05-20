@@ -25,10 +25,7 @@ import Main from './pages/Main';
 
 import 'animate.css';
 import WOW from 'wowjs';
-// jquery
 
-import HomePageTwo from './pages/HomePageTwo';
-import HomePageThree from './pages/HomePageThree';
 import Services from './pages/Services';
 import AboutUs from './pages/AboutUs';
 import Portfolio from './pages/Portfolio';
@@ -37,7 +34,15 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import MainTeam from './pages/MainTeam';
 import Blog from './pages/Blog';
+import Contact from './pages/Contact';
+import 'semantic-ui-css/semantic.min.css';
+import { YMaps } from 'react-yandex-maps';
+import Login from './pages/Login';
 function App() {
+  console.log(
+    "%cThis console for devolopers don't change anithhing we will take your data ❌❌❌❗",
+    'color:blue',
+  );
   useEffect(() => {
     new WOW.WOW({
       live: false,
@@ -45,17 +50,19 @@ function App() {
   }, []);
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/homepagetwo" element={<HomePageTwo />} />
-        <Route path="/homepagethree" element={<HomePageThree />} />
-        <Route path="/service" element={<Services />} />
-        <Route path="/aboutus" element={<AboutUs />} />
-        <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/portfoliodetails" element={<Portfoliodetails />} />
-        <Route path="/team" element={<MainTeam />} />
-        <Route path="/blog" element={<Blog />} />
-      </Routes>
+      <YMaps>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/service" element={<Services />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/portfolio" element={<Portfolio />} />
+          <Route path="/portfoliodetails" element={<Portfoliodetails />} />
+          <Route path="/team" element={<MainTeam />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/login" element={<Login />} />
+        </Routes>
+      </YMaps>
     </BrowserRouter>
   );
 }

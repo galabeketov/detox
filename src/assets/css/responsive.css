@@ -22,7 +22,7 @@
 
 @media only screen and (max-width: 1200px) {
   .main-menu .navigation > li {
-    margin: 0px 20px;
+    margin: 0px 10px;
   }
 
   #image_block_03 .image-box .image-1 {
@@ -575,7 +575,9 @@
     margin-bottom: 0px;
     margin-top: 50px;
   }
-
+  .menu-right-content {
+    margin-top: 100px !important;
+  }
   .rtl .service-style-two .content-box {
     margin-left: 0px;
   }

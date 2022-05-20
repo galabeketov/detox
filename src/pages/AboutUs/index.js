@@ -1,12 +1,11 @@
 /** @format */
 
 import React from 'react';
+import Helmet from 'react-helmet';
 import FeaturesTwo from '../../components/AboutUsComponents/FeatureTwo';
 import MainAbout from '../../components/AboutUsComponents/MainAbout';
 import PageTitleAbout from '../../components/AboutUsComponents/PageTitleAbout';
 import Team from '../../components/AboutUsComponents/Team';
-import PageDirection from '../../components/HomePageTwoComponents/PageDirection';
-import SwitcherMenu from '../../components/HomePageTwoComponents/SwitcherMenu';
 import CtaSection from '../../components/MainComponents/CtaSection';
 import MainFooter from '../../components/MainFooter';
 import MainHeader from '../../components/MainHeader';
@@ -16,10 +15,14 @@ import Chooseus from '../../components/ServicesComponents/Chooseus';
 
 export default function AboutUs() {
   return (
-    <div className='boxed_wrapper ltr'>
+    <div className="boxed_wrapper ltr">
+      <Helmet>
+        <html lang="eng" />
+        <title>About us</title>
+        <meta name="description" content="about detox app" />
+        <meta name="theme-color" content="#fff" />
+      </Helmet>
       {/* <div className="preloader"></div> */}
-      <PageDirection />
-      <SwitcherMenu />
       <MainHeader />
       <MobileMenu />
       <PageTitleAbout />
